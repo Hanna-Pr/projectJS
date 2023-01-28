@@ -58,9 +58,40 @@
 
  
 
-const category = 'toys';  
+// const category = 'toys';  
 
-console.log(`htpps://someurl.com/${category}/5`);
+// console.log(`htpps://someurl.com/${category}/5`);
 
-const user = "Ivan";
-alert( `Привет, ${user}`);
+// const user = "Ivan";
+// alert( `Привет, ${user}`);
+
+let incr = 10,
+    decr = 10;
+
+    // incr ++;
+    // decr--;
+
+
+    // console.log(++incr);
+    // console.log (--decr);
+    // console.log(5%2);
+
+    const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", ''); 
+    // + перед prompt значит что вводится может только число
+    const personalMovieDB = {
+        count: numberOfFilms,
+        movies : {},
+        actors : {},
+        genres : [],
+        privat: false
+        };    
+
+    const lastSeenMovie = prompt("Один из просмотренных фильмов?", ''),
+          lastSeenMovieRating = prompt("На сколько оцениваете его?", ''),
+          lastSeenMovie2 = prompt("Один из просмотренных фильмов?", ''),
+          lastSeenMovieRating2 = prompt("На сколько оцениваете его?", '');
+
+    personalMovieDB.movies [lastSeenMovie] = lastSeenMovieRating;
+    personalMovieDB.movies [lastSeenMovie2] = lastSeenMovieRating2;
+
+    console.log(personalMovieDB);
